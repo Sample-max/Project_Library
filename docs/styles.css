@@ -144,7 +144,7 @@ button .text{
   width:20px;
   align-self: flex-start;
   margin-top:5px;
-  background-image: url('images/delete.svg');
+  background-image: url('/docs/images/delete.svg');
   border-radius:5px;
   &:hover{
     cursor:grab
