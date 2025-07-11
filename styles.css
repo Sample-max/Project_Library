@@ -1,0 +1,243 @@
+   @font-face {
+    font-family: 'balooregular';
+    src: url('baloo_font/baloo-regular-webfont.woff2') format('woff2'),
+         url('baloo_font/baloo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body ,html{
+    margin:0px;
+    border:0px;
+    height:100%;
+    width:100%;
+
+}
+body{
+    background-color: yellow;
+    display: grid;
+    grid-template-columns:1fr 5fr;
+    grid-template-rows:1fr 1fr;
+}
+.logo{
+    margin:25px;
+    font-size: 70px;
+    font-weight: 1000;
+    color: purple;
+    text-shadow: 5px 0 #fff, -5px 0 #fff, 0 5px #fff, 0 -5px #fff,
+             5px 5px #fff, -5px -5px #fff, 5px -5px #fff, -5px 5px #fff;
+    
+    font-family:'balooregular';
+    line-height: 55px;
+}
+#main-content{
+    background-color:rgb(25, 146, 212);
+    margin: 30px;
+    border:10px solid #CACCCE;
+    border-radius:10px;
+     display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-column-start: 2;
+   grid-row-start: 1;
+   grid-row-end: 3;
+   padding:10px;
+}
+.card{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color:orange;
+    border:5px outset orangered;
+    border-radius:5px;
+    margin:10px 15px 10px 15px;
+    color:white;
+    font-size:20px;
+    height:207px;
+    padding:0px 5px 0px 5px;
+}
+.card p,form,button{
+justify-self:center;
+    align-self: center;
+    text-align: center;
+}
+
+span{
+    color:black;
+}
+p{
+    line-height: 20px;
+    margin-bottom:0px;
+}
+.remote{
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top:75px;
+    margin-bottom:75px;
+}
+.remote button{
+    margin:20px;
+    align-self: center;
+    justify-self: start;
+    width:250px;
+    height:60px;
+    background-color: rgb(25, 146, 212);
+    color:white;
+    border:none;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    &:hover{
+        cursor:grab;
+    }
+}
+.icon{
+    height:45px;
+    width:45px;
+    background-color: white;
+    margin-top:6px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon img{
+     height:55px;
+    width:55px;
+    border-radius: 30px;
+    
+}
+.remote button{
+    display: flex;
+}
+button .text{
+    margin:12px 0px 10px 10px;
+}
+.author{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.author span{
+  align-self: center;
+  margin-top:10px;
+  margin-left: 30px;
+}
+.author p{
+  margin-top: 10px;
+  justify-self: flex-start;
+}
+.pages{
+  margin-bottom: 10px;
+}
+.status{
+  display: flex;
+  margin:15px 20px 0px 20px;
+  justify-content: center;
+}
+.top{
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.top button{
+  height:20px;
+  width:20px;
+  align-self: flex-start;
+  margin-top:5px;
+  background-image: url('images/delete.svg');
+  border-radius:5px;
+  &:hover{
+    cursor:grab
+  }
+}
+button,input[type="button"] {
+  cursor: default;
+}
+form input{
+  margin-left:10px;
+  margin-right: 10px;
+  display: block;
+}
+form button{
+   background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin:10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+form h4{
+  margin-top:0px;
+}
+#favDialog{
+  border-radius:5px;
+  border:2px solid black;
+  margin-top:100px;
+}
+input{
+  height:30px;
+  font-size: 15px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:red;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

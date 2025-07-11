@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library site</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <span class="logo">Online Library</span>
+  <div class="remote">
+  <button id="add"><div class="icon"><img src="images/plus-circle.svg"></div><div class="text">Add Book</div></button>
+ <button id="delete"><div class="icon"><img src="images/delete-circle.svg"></div><div class="text">Delete Book</div></button>
+  </div>
+  <div id="main-content">
+    </div>
+    <dialog id="favDialog">
+      <form id="bookForm">
+        <h3>Add Book</h3>
+        <input type="text" id="Title"name ="title" placeholder="Title of book" required><br>
+        <input type="text" id="Author" name="author" placeholder="author" required><br>
+        <input type="number" id="Pages" name="pages" placeholder="number of pages" min="1" required><br>
+        <label for="Read">Read:</label>
+<select id="Read" name="read" required>
+  <option value="">--Select--</option>
+  <option value="true">true</option>
+  <option value="false">false</option>
+</select><br>
+        <div>
+      <button value="cancel" formmethod="dialog">Cancel</button>
+      <button id="confirmBtn" value="default">Confirm</button>
+    </div>
+    </form>
+    </dialog>
+<script src="script.js"></script>
+  </body>
+  
+</html>
